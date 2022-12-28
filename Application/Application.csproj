@@ -6,4 +6,28 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Dtos\" />
+    <None Remove="Dtos\Editoriales\" />
+    <None Remove="Dtos\Editoriales\Maps\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Abstractions\" />
+    <None Remove="Services\Implementations\" />
+    <None Remove="AutoMapper" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dtos\" />
+    <Folder Include="Dtos\Editoriales\" />
+    <Folder Include="Dtos\Editoriales\Maps\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Abstractions\" />
+    <Folder Include="Services\Implementations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+  </ItemGroup>
 </Project>
