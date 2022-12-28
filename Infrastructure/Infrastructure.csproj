@@ -12,6 +12,9 @@
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="Context\" />
     <None Remove="ModelMaps\" />
+    <None Remove="Repositories\" />
+    <None Remove="Repositories\Abstractions\" />
+    <None Remove="Repositories\Implementations\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
@@ -21,6 +24,9 @@
   <ItemGroup>
     <Folder Include="Context\" />
     <Folder Include="ModelMaps\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Repositories\Abstractions\" />
+    <Folder Include="Repositories\Implementations\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
