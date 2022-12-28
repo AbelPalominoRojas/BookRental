@@ -12,6 +12,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.Configure<RouteOptions>(options =>
+{
+    options.LowercaseUrls = true;
+    options.LowercaseQueryStrings = true;
+});
+
 // Data base context
 builder.Services.AddDbContext<ApplicationDbContext>();
 
@@ -35,7 +41,6 @@ builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
         .AsImplementedInterfaces()
         .InstancePerLifetimeScope();
     });
-
 
 builder.Services.AddAutoMapper(Assembly.Load("Application"));
 
