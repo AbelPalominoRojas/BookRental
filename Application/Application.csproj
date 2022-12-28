@@ -15,6 +15,8 @@
     <None Remove="Services\Implementations\" />
     <None Remove="AutoMapper" />
     <None Remove="Base\" />
+    <None Remove="Dtos\Libros\" />
+    <None Remove="Dtos\Libros\Maps\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dtos\" />
@@ -24,6 +26,8 @@
     <Folder Include="Services\Abstractions\" />
     <Folder Include="Services\Implementations\" />
     <Folder Include="Base\" />
+    <Folder Include="Dtos\Libros\" />
+    <Folder Include="Dtos\Libros\Maps\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
