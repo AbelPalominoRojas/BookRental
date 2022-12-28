@@ -1,4 +1,6 @@
 ﻿using System;
+using Application.Dtos.Editoriales;
+
 namespace Application.Dtos.Libros
 {
 	public class LibroDto
@@ -12,6 +14,8 @@ namespace Application.Dtos.Libros
         public int IdEditorial { get; set; }
         public DateTime FechaRegistro { get; set; }
         public int Estado { get; set; }
+
+        public EditorialDto Editorial { get; set; }
     }
 }
 

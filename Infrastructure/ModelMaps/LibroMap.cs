@@ -20,6 +20,8 @@ namespace Infrastructure.ModelMaps
             builder.Property(t => t.IdEditorial).HasColumnName("id_editorial");
             builder.Property(t => t.FechaRegistro).HasColumnName("fecha_registro");
             builder.Property(t => t.Estado).HasColumnName("estado");
+
+            builder.HasOne(t => t.Editorial).WithMany(t => t.Libros).HasForeignKey(t => t.IdEditorial);
         }
     }
 }

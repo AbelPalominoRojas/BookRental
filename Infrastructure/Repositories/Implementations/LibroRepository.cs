@@ -59,10 +59,10 @@ namespace Infrastructure.Repositories.Implementations
         }
 
         public async Task<Libro?> Find(int id)
-        => await _context.Libros.FindAsync(id);
+        => await _context.Libros.Include(e => e.Editorial).FirstOrDefaultAsync(e => e.Id == id);
 
         public async Task<IList<Libro>> FindAll()
-        => await _context.Libros.ToListAsync();
+        => await _context.Libros.Include(e => e.Editorial).OrderByDescending(e => e.Id).ToListAsync();
     }
 }
 
