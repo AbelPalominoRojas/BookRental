@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Paginations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Paginations\" />
+  </ItemGroup>
 </Project>
