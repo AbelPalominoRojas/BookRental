@@ -4,6 +4,7 @@ using Application.Services.Abstractions;
 using AutoMapper;
 using Domain;
 using Infrastructure.Repositories.Abstractions;
+using Utils.Paginations;
 
 namespace Application.Services.Implementations
 {
@@ -54,6 +55,14 @@ namespace Application.Services.Implementations
             var response = await _libroRepository.FindAll();
 
             return _mapper.Map<IList<LibroDto>>(response);
+        }
+
+        public async Task<ResponsePagination<LibroDto>> PaginatedSearch(RequestPagination<LibroDto> dto)
+        {
+            var entity = _mapper.Map<RequestPagination<Libro>>(dto);
+            var response = await _libroRepository.PaginatedSearch(entity);
+
+            return _mapper.Map<ResponsePagination<LibroDto>>(response);
         }
     }
 }

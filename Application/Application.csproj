@@ -17,6 +17,11 @@
     <None Remove="Base\" />
     <None Remove="Dtos\Libros\" />
     <None Remove="Dtos\Libros\Maps\" />
+    <None Remove="Dtos\Solicitantes\" />
+    <None Remove="Dtos\Solicitantes\Maps\" />
+    <None Remove="Dtos\Prestamos\" />
+    <None Remove="Dtos\Prestamos\Maps\" />
+    <None Remove="Dtos\Prestamos\Maps\Actions\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dtos\" />
@@ -28,6 +33,11 @@
     <Folder Include="Base\" />
     <Folder Include="Dtos\Libros\" />
     <Folder Include="Dtos\Libros\Maps\" />
+    <Folder Include="Dtos\Solicitantes\" />
+    <Folder Include="Dtos\Solicitantes\Maps\" />
+    <Folder Include="Dtos\Prestamos\" />
+    <Folder Include="Dtos\Prestamos\Maps\" />
+    <Folder Include="Dtos\Prestamos\Maps\Actions\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />

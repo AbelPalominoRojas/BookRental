@@ -4,8 +4,8 @@ using Application.Dtos.Libros;
 
 namespace Application.Services.Abstractions
 {
-	public interface ILibroService : IServiceBase<LibroDto, LibroFormDto, int>
+    public interface ILibroService : IServiceBase<LibroDto, LibroFormDto, int>, IServicePaginated<LibroDto>
     {
-	}
+    }
 }
 
