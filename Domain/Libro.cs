@@ -14,6 +14,7 @@ namespace Domain
         public int? Estado { get; set; } = 1;
 
         public virtual Editorial Editorial { get; set; }
+        public virtual IList<PrestamoDetalle> PrestamoDetalles { get; set; }
     }
 }
 
