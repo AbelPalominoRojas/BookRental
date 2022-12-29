@@ -16,7 +16,7 @@ namespace Utils.Paginations
 			get { return (_perPag <= 0) ? 10 : _perPag; }
 			set { _perPag = value; }
 		}
-		public T Filter { get; set; }
+		public T? Filter { get; set; }
 	}
 }
 

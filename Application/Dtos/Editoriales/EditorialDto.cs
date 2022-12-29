@@ -7,7 +7,7 @@ namespace Application.Dtos.Editoriales
         public string Codigo { get; set; }
         public string Nombre { get; set; }
         public DateTime FechaRegistro { get; set; }
-        public int Estado { get; set; }
+        public int? Estado { get; set; }
     }
 }
 

@@ -2,6 +2,8 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Infrastructure.Context;
+using Infrastructure.Core.Paginations.Abstractions;
+using Infrastructure.Core.Paginations.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +29,8 @@ builder.Services.AddDbContext<ApplicationDbContext>();
 // builder.Services.AddScoped<IEditorialService, EditorialService>();
 
 // builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+builder.Services.AddScoped(typeof(IPaginator<>), typeof(Paginator<>));
 
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
     .ConfigureContainer<ContainerBuilder>(options =>

@@ -10,7 +10,7 @@ namespace Infrastructure.Core.Paginations.Implementations
         public async Task<ResponsePagination<T>> Paginate(IQueryable<T> query, RequestPagination<T> request)
         {
             var total = await query.CountAsync();
-            var pagination = new Pagination(total, request.Page, request.Page);
+            var pagination = new Pagination(total, request.Page, request.PerPage);
 
             var sizePerPage = pagination.PerPage;
 
