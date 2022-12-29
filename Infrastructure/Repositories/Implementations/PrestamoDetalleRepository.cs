@@ -66,7 +66,7 @@ namespace Infrastructure.Repositories.Implementations
             .FirstOrDefaultAsync(e => e.IdPrestamo == id.IdPrestamo && e.IdLibro == id.IdLibro);
 
         public async Task<IList<PrestamoDetalle>> FindAll()
-        => await _context.PrestamoDetalles.ToListAsync();
+        => await _context.PrestamoDetalles.OrderByDescending(e =>e.IdPrestamo).ToListAsync();
 
         public async Task<ResponsePagination<PrestamoDetalle>> PaginatedSearch(RequestPagination<PrestamoDetalle> entity)
         {
