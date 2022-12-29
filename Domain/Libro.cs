@@ -8,10 +8,10 @@ namespace Domain
         public string Titulo { get; set; }
         public string Autores { get; set; }
         public string Edicion { get; set; }
-        public int Anio { get; set; }
-        public int IdEditorial { get; set; }
+        public int? Anio { get; set; }
+        public int? IdEditorial { get; set; }
         public DateTime FechaRegistro { get; set; } = DateTime.UtcNow;
-        public int Estado { get; set; } = 1;
+        public int? Estado { get; set; } = 1;
 
         public virtual Editorial Editorial { get; set; }
     }
