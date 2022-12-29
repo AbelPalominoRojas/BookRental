@@ -16,6 +16,10 @@
     <None Remove="Repositories\Abstractions\" />
     <None Remove="Repositories\Implementations\" />
     <None Remove="Base\" />
+    <None Remove="Core\" />
+    <None Remove="Core\Paginations\" />
+    <None Remove="Core\Paginations\Abstractions\" />
+    <None Remove="Core\Paginations\Implementations\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
@@ -29,6 +33,10 @@
     <Folder Include="Repositories\Abstractions\" />
     <Folder Include="Repositories\Implementations\" />
     <Folder Include="Base\" />
+    <Folder Include="Core\" />
+    <Folder Include="Core\Paginations\" />
+    <Folder Include="Core\Paginations\Abstractions\" />
+    <Folder Include="Core\Paginations\Implementations\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
