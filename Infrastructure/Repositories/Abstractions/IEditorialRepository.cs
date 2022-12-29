@@ -4,7 +4,7 @@ using Infrastructure.Base;
 
 namespace Infrastructure.Repositories.Abstractions
 {
-    public interface IEditorialRepository : IRepositoryCrud<Editorial, int>
+    public interface IEditorialRepository : IRepositoryCrud<Editorial, int>, IRepositoryPaginated<Editorial>
     {
     }
 }
